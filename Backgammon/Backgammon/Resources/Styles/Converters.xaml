@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Backgammon.Resources.Styles.Converters"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cnv="clr-namespace:Backgammon.Converters">
+    <cnv:BoolToIconConverter x:Key="passwordIconConvert" IconOn="&#xE897;" IconOff="&#xE898;"/>
+    <cnv:BoolToIconConverter x:Key="CheckBoxIconConvert" IconOn="&#xE834;" IconOff="&#xE835;"/>
+    </ResourceDictionary>

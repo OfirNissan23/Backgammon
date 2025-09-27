@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Backgammon.Resources.Styles.MyStyles"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Style x:Key="Board" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="#DEB887" />
+        <Setter Property="Stroke" Value="#3e2109" />
+        <Setter Property="StrokeThickness" Value="3" />
+        <Setter Property="WidthRequest" Value="375" />
+        <Setter Property="HeightRequest" Value="375" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+    <Style x:Key="TriangleUp" TargetType="Polygon">
+        <Setter Property="Points" Value="2,0 15,170 28,0" />
+    </Style>
+    <Style x:Key="TriangleOddUp" BasedOn="{StaticResource TriangleUp}" TargetType="Polygon">
+        <Setter Property="Fill" Value="#AC6836" />
+    </Style>
+    <Style x:Key="TriangleEvenUp" BasedOn="{StaticResource TriangleUp}" TargetType="Polygon">
+        <Setter Property="Fill" Value="#3e2109" />
+    </Style>
+    <Style x:Key="TriangleDown" TargetType="Polygon">
+        <Setter Property="Points" Value="2,187.5 15,17.5 28,187.5" />
+    </Style>
+    <Style x:Key="TriangleOddDown" BasedOn="{StaticResource TriangleDown}" TargetType="Polygon">
+        <Setter Property="Fill" Value="#3e2109" />
+    </Style>
+    <Style x:Key="TriangleEvenDown" BasedOn="{StaticResource TriangleDown}" TargetType="Polygon">
+        <Setter Property="Fill" Value="#AC6836" />
+    </Style>
+    <Style x:Key="Half" TargetType="BoxView">
+        <Setter Property="Color" Value="#3e2109" />
+        <Setter Property="WidthRequest" Value="9" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+    <Style TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="Black" />
+        <Setter Property="CornerRadius" Value="55" />
+        <Setter Property="WidthRequest" Value="23" />
+        <Setter Property="HeightRequest" Value="23" />
+    </Style>
+    <Style x:Key="Soldiers" TargetType="BoxView">
+        <Setter Property="Shadow" Value="0.4" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="WidthRequest" Value="23" />
+        <Setter Property="HeightRequest" Value="23" />
+    </Style>
+    <Style
+        x:Key="BlackSoldiers"
+        BasedOn="{StaticResource Soldiers}"
+        TargetType="BoxView">
+        <Setter Property="Background">
+            <Setter.Value>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.0" Color="#444444" />
+                    <GradientStop Offset="0.6" Color="#222222" />
+                    <GradientStop Offset="0.8" Color="#111111" />
+                    <GradientStop Offset="1.0" Color="#000000" />
+                </RadialGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style
+        x:Key="WhiteSoldiers"
+        BasedOn="{StaticResource Soldiers}"
+        TargetType="BoxView">
+        <Setter Property="Background">
+            <Setter.Value>
+                <RadialGradientBrush>
+                    <GradientStop Offset="0.0" Color="White" />
+                    <GradientStop Offset="0.5" Color="#EEEEEE" />
+                    <GradientStop Offset="0.8" Color="#CCCCCC" />
+                    <GradientStop Offset="1.0" Color="#AAAAAA" />
+                </RadialGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

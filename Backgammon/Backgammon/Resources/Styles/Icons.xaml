@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Backgammon.Resources.Styles.Icons"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="IconVisibility_on">&#xE898;</x:String>
+    <x:String x:Key="IconVisibility_off">&#xE897;</x:String>
+    <x:String x:Key="IconCheckBox_off">&#xE835;</x:String>
+    <x:String x:Key="IconCheckBox_on">&#xE834;</x:String>
+    <x:String x:Key="IdCard">&#xF4ca;</x:String>
+    <x:String x:Key="Email">&#xE158;</x:String>
+    <x:String x:Key="Phone">&#xE9cd;</x:String>
+    <x:String x:Key="Location">&#xE438;</x:String>
+</ResourceDictionary>
+
+  
+   

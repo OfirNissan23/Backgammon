@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Backgammon.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:m="clr-namespace:Backgammon.Models"
+    xmlns:vm="clr-namespace:Backgammon.ViewModels"
+    x:DataType="vm:LoginPageVM"
+    BackgroundColor="#C0C0C0"
+    NavigationPage.HasNavigationBar="False"
+    IsBusy="{Binding IsBusy}">
+    <Frame Style="{StaticResource LoginFrame}">
+        <VerticalStackLayout Style="{StaticResource LoginStack}">
+            <Label Style="{StaticResource LoginLabel}" Text="{x:Static m:Strings.LoginTitle}" />
+            <Border Style="{StaticResource LoginBorder}">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Button Style="{StaticResource LoginIcons}" Text="{x:Static m:Icons.IDCard}" Grid.Column="0"/>
+                    <Entry Style="{StaticResource LoginEntry}" Placeholder="{x:Static m:Strings.NamePlaceholder}" Text="{Binding Name}" Grid.Column="1"/>
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource LoginBorder}">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Button Style="{StaticResource LoginIcons}" Command="{Binding IsPasswordCommand}" Text="{Binding IsPassword, Converter={StaticResource passwordIconConvert}}" Grid.Column="0"/>
+                    <Entry Style="{StaticResource LoginEntry}" IsPassword="{Binding IsPassword}" Placeholder="{x:Static m:Strings.PasswordPlaceholder}" Text="{Binding Password}" Grid.Column="1" />
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource LoginBorder}">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Button Style="{StaticResource LoginIcons}" Text="{x:Static m:Icons.Email}" Grid.Column="0"/>
+                    <Entry Style="{StaticResource LoginEntry}" Placeholder="{x:Static m:Strings.EmailPlaceholder}" Text="{Binding Email}" Grid.Column="1"/>
+                </Grid>
+            </Border>
+            <Border Style="{StaticResource LoginBorder}">
+                <Grid ColumnDefinitions="Auto,*">
+                    <Button Style="{StaticResource LoginIcons}" Text="{x:Static m:Icons.Phone}" Grid.Column="0"/>
+                    <Entry Style="{StaticResource LoginEntry}" Keyboard="Numeric" Placeholder="{x:Static m:Strings.PhonePlaceholder}" Text="{Binding Phone}" Grid.Column="1"/>
+                </Grid>
+            </Border>
+            <Grid HorizontalOptions="End" ColumnDefinitions="Auto,Auto">
+                <Label Text="{x:Static m:Strings.RememberMe}" Grid.Column="0" Style="{StaticResource SaveMe}"/>
+                <Button Style="{StaticResource SaveMeButton}" Command="{Binding SaveMeCommand}" Text="{Binding SaveMe, Converter={StaticResource CheckBoxIconConvert}}" Grid.Column="1"/>
+            </Grid>
+            <Border Style="{StaticResource LoginBorder}">
+                <Button Style="{StaticResource LoginButton}" Command="{Binding LoginCommand}" Text="{x:Static m:Strings.LoginTitle}" />
+            </Border>
+            <Grid ColumnDefinitions="Auto,*">
+                <Button Style="{StaticResource LoginNavigateButton}" Command="{Binding NavigateToSignUpCommand}"  Text="{x:Static m:Strings.ToSignUpPage}" Grid.Column="0"/>
+                <Label Text="{x:Static m:Strings.CreateAccount}" Style="{StaticResource DontHaveAccount}" Grid.Column="1"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>
