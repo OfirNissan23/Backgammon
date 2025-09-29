@@ -16,5 +16,7 @@ namespace Backgammon.Models
         public const string ToLoginPage = "Login Page";
         public const string HaveAccount = "Already have an account?";
         public const string CreateAccount = "To Create An Account";
+        public const string Ok = "Ok";
+        public const string CreateUserError = "Create User Error";
     }
 }

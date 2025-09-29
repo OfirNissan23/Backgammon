@@ -1,4 +1,5 @@
 ﻿using Backgammon.Models;
+
 namespace Backgammon.ModelsLogic
 {
     public class User : UserModel
@@ -7,10 +8,10 @@ namespace Backgammon.ModelsLogic
         {
             if (currentState == SaveMeState.WantSave)
             {
-                Preferences.Set(Keys.NameKey, Name);
+                /*Preferences.Set(Keys.NameKey, Name);
                 Preferences.Set(Keys.PasswordKey, Password);
                 Preferences.Set(Keys.EmailKey, Email);
-                Preferences.Set(Keys.PhoneKey, Phone);
+                Preferences.Set(Keys.PhoneKey, Phone); */
             }
             else
             {
@@ -24,13 +25,33 @@ namespace Backgammon.ModelsLogic
         }
         public override void SignUp()
         {
-            if (currentState == SaveMeState.WantSave)
+            if(currentState == SaveMeState.WantSave)
+               fbd.CreateUserWithEmailAndPasswordAsync(Email, Password, Name, OnComplete);
+           /* if (currentState == SaveMeState.WantSave)
             {
                 Preferences.Set(Keys.InstagramKey, Instagram);
                 Preferences.Set(Keys.AddressKey, Address);
-            }
+            } */
              Login();
         }
+        private void OnComplete(Task task)
+        {
+            if (task.IsCompletedSuccessfully)
+                SaveToPreferences();
+            else
+                Shell.Current.DisplayAlert(Strings.CreateUserError, task.Exception?.Message, Strings.Ok);
+        }
+
+        private void SaveToPreferences()
+        {
+            Preferences.Set(Keys.NameKey, Name);
+            Preferences.Set(Keys.PasswordKey, Password);
+            Preferences.Set(Keys.EmailKey, Email);
+            Preferences.Set(Keys.PhoneKey, Phone);
+            Preferences.Set(Keys.InstagramKey, Instagram);
+            Preferences.Set(Keys.AddressKey, Address);
+        }
+
         public override void UpdateSaveMe()
         {
             if (currentState == SaveMeState.DontWantSave)

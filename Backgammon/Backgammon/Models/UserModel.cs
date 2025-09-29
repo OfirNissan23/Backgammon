@@ -1,4 +1,5 @@
-﻿namespace Backgammon.Models
+﻿using Backgammon.ModelsLogic;
+namespace Backgammon.Models
 {
     public abstract class UserModel
     {
@@ -7,7 +8,8 @@
             WantSave,
             DontWantSave
         }
-        protected SaveMeState currentState = SaveMeState.DontWantSave;  
+        protected SaveMeState currentState = SaveMeState.DontWantSave;
+        protected FbData fbd = new();
         public bool IsRegistered => !string.IsNullOrWhiteSpace(Name) && !string.IsNullOrWhiteSpace(Password) && !string.IsNullOrWhiteSpace(Email) && !string.IsNullOrWhiteSpace(Phone);
         public string Name { get; set; } = string.Empty;
         public string Instagram { get; set; } = string.Empty;
