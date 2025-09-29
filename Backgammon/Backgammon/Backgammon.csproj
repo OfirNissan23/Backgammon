@@ -41,34 +41,50 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-maccatalyst|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-ios|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-maccatalyst|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-windows10.0.19041.0|AnyCPU'">
 	  <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+	  <ApplicationIdGuid></ApplicationIdGuid>
+	  <ApplicationId>com.meitar.backgammon</ApplicationId>
 	</PropertyGroup>
 
 	<ItemGroup>
