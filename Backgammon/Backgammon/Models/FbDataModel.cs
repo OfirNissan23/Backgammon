@@ -17,7 +17,7 @@ namespace Backgammon.Models
             FirebaseAuthConfig fac = new()
             {
                 ApiKey = Keys.FbApiKey,
-                AuthDomain = "backgammon-6fbbf.firebaseapp.com",
+                AuthDomain = Keys.FbAppDomainKey,
                 Providers = [new EmailProvider()]
             };
             facl = new FirebaseAuthClient(fac);

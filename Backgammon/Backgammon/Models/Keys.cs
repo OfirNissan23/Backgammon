@@ -9,5 +9,6 @@
         public const string InstagramKey = "instagram";
         public const string AddressKey = "address";
         public const string FbApiKey = "AIzaSyDo11IePJ7EZEvdMP3MUTZXAmHoATPdJ7s";
+        public const string FbAppDomainKey = "backgammon-d2c3e.firebaseapp.com";
     }
 }
